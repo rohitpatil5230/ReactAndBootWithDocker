@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2>Add Employee</h2>
+<form th:action="@{/api/employees/save}" method="post" th:object="${employee}">
+    Name: <input type="text" th:field="*{name}"/><br/><br/>
+    Department: <input type="text" th:field="*{department}"/><br/><br/>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
